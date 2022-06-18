@@ -12,9 +12,9 @@ import EmailInbox from "../pages/Email/email-inbox"
 import EmailRead from "../pages/Email/email-read"
 import EmailCompose from "../pages/Email/email-compose"
 
-import Emailtemplatealert from "../pages/EmailTemplate/email-template-alert";
-import Emailtemplatebasic from "../pages/EmailTemplate/email-template-basic";
-import Emailtemplatebilling from "../pages/EmailTemplate/email-template-billing";
+import Emailtemplatealert from "../pages/EmailTemplate/email-template-alert"
+import Emailtemplatebasic from "../pages/EmailTemplate/email-template-basic"
+import Emailtemplatebilling from "../pages/EmailTemplate/email-template-billing"
 
 // Authentication related pages
 import Login from "../pages/Authentication/Login"
@@ -41,6 +41,13 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
+
+//Sales
+import Sales from "pages/Sales/Sales"
+import SalesMC from "pages/Sales/SalesMC"
+import SalesAuto from "pages/Sales/SalesAuto"
+import SalesBTY from "pages/Sales/SalesBTY"
+
 // Charts
 import ChartApex from "../pages/Charts/Apexcharts"
 import ChartistChart from "../pages/Charts/ChartistChart"
@@ -57,7 +64,7 @@ import MapsLeaflet from "../pages/Maps/MapsLeaflet"
 import IconDripicons from "../pages/Icons/IconDripicons"
 import IconMaterialdesign from "../pages/Icons/IconMaterialdesign"
 import TypiconsIcon from "../pages/Icons/IconTypicons"
-import IconIon from "../pages/Icons/IconIon";
+import IconIon from "../pages/Icons/IconIon"
 import ThemifyIcon from "../pages/Icons/IconThemify"
 import IconFontawesome from "../pages/Icons/IconFontawesome"
 
@@ -104,16 +111,22 @@ import PagesStarter from "../pages/Utility/pages-starter"
 import PagesMaintenance from "../pages/Utility/pages-maintenance"
 import PagesComingsoon from "../pages/Utility/pages-comingsoon"
 import PagesTimeline from "../pages/Utility/pages-timeline"
-import PagesInvoice from "../pages/Utility/PagesInvoice";
+import PagesInvoice from "../pages/Utility/PagesInvoice"
 import PagesFaqs from "../pages/Utility/pages-faqs"
 import PagesPricing from "../pages/Utility/pages-pricing"
 import Pages404 from "../pages/Utility/pages-404"
 import Pages500 from "../pages/Utility/pages-500"
-import PagesGallery from "../pages/Utility/PagesGallery";
-import PagesDirectory from "../pages/Utility/PagesDirectory";
+import PagesGallery from "../pages/Utility/PagesGallery"
+import PagesDirectory from "../pages/Utility/PagesDirectory"
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
+
+  //Sales
+  { path: "/sales", component: Sales },
+  { path: "/sales-mc", component: SalesMC },
+  { path: "/sales-auto", component: SalesAuto },
+  { path: "/sales-bty", component: SalesBTY },
 
   // //calendar
   { path: "/calendar", component: Calendar },
@@ -126,11 +139,11 @@ const userRoutes = [
   { path: "/email-read", component: EmailRead },
   { path: "/email-compose", component: EmailCompose },
 
-    // Email Template
-    { path: "/email-template-alert", component: Emailtemplatealert },
-    { path: "/email-template-basic", component: Emailtemplatebasic },
-    { path: "/email-template-billing", component: Emailtemplatebilling },
-  
+  // Email Template
+  { path: "/email-template-alert", component: Emailtemplatealert },
+  { path: "/email-template-basic", component: Emailtemplatebasic },
+  { path: "/email-template-billing", component: Emailtemplatebilling },
+
   //Charts
   { path: "/apex-charts", component: ChartApex },
   { path: "/chartist-charts", component: ChartistChart },
