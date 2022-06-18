@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
 import { connect } from "react-redux"
 
@@ -8,7 +8,14 @@ import { Link } from "react-router-dom"
 // Redux Store
 import { showRightSidebarAction, toggleLeftmenu } from "../../store/actions"
 // reactstrap
-import { Row, Col, Dropdown, DropdownToggle, DropdownMenu,DropdownItem } from "reactstrap"
+import {
+  Row,
+  Col,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap"
 
 // Import menuDropdown
 import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
@@ -19,12 +26,11 @@ import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 import { withTranslation } from "react-i18next"
 
 // import images
-import logodarkImg from "../../assets/images/logo-dark.png";
-import logosmImg from "../../assets/images/logo-sm.png";
-import logolightImg from "../../assets/images/logo-light.png";
+import logodarkImg from "../../assets/images/logo-dark.png"
+import logosmImg from "../../assets/images/logo-sm.png"
+import logolightImg from "../../assets/images/logo-light.png"
 
 const Header = props => {
-
   function toggleFullscreen() {
     if (
       !document.fullscreenElement &&
@@ -51,7 +57,6 @@ const Header = props => {
       }
     }
   }
-  
 
   return (
     <React.Fragment>
@@ -61,63 +66,76 @@ const Header = props => {
             <div className="navbar-brand-box">
               <Link to="/dashboard" className="logo logo-dark">
                 <span className="logo-sm">
-                  <img src={logosmImg} alt="" height="22" />
+                  {/* <img src={logosmImg} alt="" height="22" /> */}
+                  <h1>SR Auto</h1>
                 </span>
                 <span className="logo-lg">
-                  <img src={logodarkImg} alt="" height="17" />
+                  {/* <img src={logodarkImg} alt="" height="17" /> */}
+                  <h1>SR Auto</h1>
                 </span>
               </Link>
 
               <Link to="/dashboard" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logosmImg} alt="" height="22" />
+                  {/* <img src={logosmImg} alt="" height="22" /> */}
+                  <h1>SR Auto</h1>
                 </span>
                 <span className="logo-lg">
-                  <img src={logolightImg} alt="" height="18" />
+                  {/* <img src={logolightImg} alt="" height="18" /> */}
+                  <h1>SR Auto</h1>
                 </span>
               </Link>
-              </div>
-              <button
-                type="button"
-                onClick={() => {
-                  props.toggleLeftmenu(!props.leftMenu)
-                }}
-                className="btn btn-sm me-2 font-size-24 d-lg-none header-item waves-effect waves-light"
-                id="vertical-menu-btn"
-              >
-                <i className="mdi mdi-menu"></i>
-              </button>
-              </div>
-            <div className="d-flex">
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                props.toggleLeftmenu(!props.leftMenu)
+              }}
+              className="btn btn-sm me-2 font-size-24 d-lg-none header-item waves-effect waves-light"
+              id="vertical-menu-btn"
+            >
+              <i className="mdi mdi-menu"></i>
+            </button>
+          </div>
+          <div className="d-flex">
             <form className="app-search d-none d-lg-block">
-                <div className="position-relative">
-                    <input type="text" className="form-control" placeholder="Search..." />
-                    <span className="fa fa-search"></span>
-                </div>
+              <div className="position-relative">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search..."
+                />
+                <span className="fa fa-search"></span>
+              </div>
             </form>
             <LanguageDropdown />
             <div className="dropdown d-none d-lg-inline-block">
-                <button type="button" className="btn header-item noti-icon waves-effect" onClick={() => {
-                    toggleFullscreen()
-                  }} data-bs-toggle="fullscreen">
-                    <i className="mdi mdi-fullscreen"></i>
-                </button>
+              <button
+                type="button"
+                className="btn header-item noti-icon waves-effect"
+                onClick={() => {
+                  toggleFullscreen()
+                }}
+                data-bs-toggle="fullscreen"
+              >
+                <i className="mdi mdi-fullscreen"></i>
+              </button>
             </div>
-            <NotificationDropdown />      
-            <ProfileMenu />        
+            <NotificationDropdown />
+            <ProfileMenu />
             <div className="dropdown d-inline-block">
-                <button
-                  onClick={() => {
-                    props.showRightSidebarAction(!props.showRightSidebar)
-                  }}
-                  type="button"
-                  className="btn header-item noti-icon right-bar-toggle waves-effect"
-                >
-                  <i className="mdi mdi-cog-outline"></i>
-                </button>
-              </div>
+              <button
+                onClick={() => {
+                  props.showRightSidebarAction(!props.showRightSidebar)
+                }}
+                type="button"
+                className="btn header-item noti-icon right-bar-toggle waves-effect"
+              >
+                <i className="mdi mdi-cog-outline"></i>
+              </button>
             </div>
           </div>
+        </div>
       </header>
     </React.Fragment>
   )
@@ -128,7 +146,7 @@ Header.propTypes = {
   showRightSidebar: PropTypes.any,
   showRightSidebarAction: PropTypes.func,
   t: PropTypes.any,
-  toggleLeftmenu: PropTypes.func
+  toggleLeftmenu: PropTypes.func,
 }
 
 const mapStatetoProps = state => {
