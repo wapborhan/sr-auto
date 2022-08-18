@@ -72,15 +72,15 @@ function Login(props) {
                   cy="1.5"
                   r="16.5"
                   stroke="white"
-                  stroke-opacity="0.66"
+                  strokeOpacity="0.66"
                   strokeWidth="2"
                 />
                 <path
                   d="M33.7656 87.2159C34.9565 76.5246 37.5874 53.6112 38.5845 47.4881V47.4881C39.1698 43.8941 40.2547 47.2322 39.8692 50.8531C38.9933 59.0813 37.1429 74.1221 35.5121 87.4131C33.1225 106.889 33.3507 95.974 33.7635 88.0818"
                   stroke="white"
                   strokeWidth="21"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>
