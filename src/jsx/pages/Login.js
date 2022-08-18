@@ -47,8 +47,8 @@ function Login (props) {
 							<circle cx="42" cy="19" r="10" fill="white"/>
 							<circle cx="75.5" cy="76.5" r="16.5" fill="#12A7FB"/>
 							<circle cx="5.5" cy="1.5" r="17.5" fill="#1362FC"/>
-							<circle className="rect-primary-rect-1" cx="5.5" cy="1.5" r="16.5" stroke="white" stroke-opacity="0.66" stroke-width="2"/>
-							<path d="M33.7656 87.2159C34.9565 76.5246 37.5874 53.6112 38.5845 47.4881V47.4881C39.1698 43.8941 40.2547 47.2322 39.8692 50.8531C38.9933 59.0813 37.1429 74.1221 35.5121 87.4131C33.1225 106.889 33.3507 95.974 33.7635 88.0818" stroke="white" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle className="rect-primary-rect-1" cx="5.5" cy="1.5" r="16.5" stroke="white" stroke-opacity="0.66" strokeWidth="2"/>
+							<path d="M33.7656 87.2159C34.9565 76.5246 37.5874 53.6112 38.5845 47.4881V47.4881C39.1698 43.8941 40.2547 47.2322 39.8692 50.8531C38.9933 59.0813 37.1429 74.1221 35.5121 87.4131C33.1225 106.889 33.3507 95.974 33.7635 88.0818" stroke="white" strokeWidth="21" stroke-linecap="round" stroke-linejoin="round"/>
 							</g>
 							<defs>
 							<clipPath id="clip0">

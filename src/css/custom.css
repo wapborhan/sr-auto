@@ -1,3 +1,8 @@
 .authincation .login-aside:after {
   width: 8.77rem !important;
 }
+
+
+.nav-header .logo-abbr {
+  max-width: 3.5rem !important;
+}
