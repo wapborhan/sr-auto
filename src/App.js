@@ -7,9 +7,10 @@ import { Route, Switch, withRouter } from "react-router-dom";
 // action
 import { checkAutoLogin } from "./services/AuthService";
 import { isAuthenticated } from "./store/selectors/AuthSelectors";
-/// Style
+/// <Style></Style>
 import "./vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
 import "./vendor/datatables/css/dataTables.min.css";
+import "./css/custom.css";
 import "./css/style.css";
 
 const SignUp = lazy(() => import("./jsx/pages/Registration"));
