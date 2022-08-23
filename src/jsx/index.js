@@ -21,6 +21,9 @@ import Room from "./components/Dashboard/Room";
 import Reviews from "./components/Dashboard/Reviews";
 import Task from "./components/Dashboard/Task";
 
+// Sales Pages
+import AllSales from "./components/sales/all-sales/AllSales";
+
 /////Demo pages
 import Demo1 from "./components/Dashboard/Demo/Demo1";
 import Demo2 from "./components/Dashboard/Demo/Demo2";
@@ -118,6 +121,8 @@ import { ThemeContext } from "../context/ThemeContext";
 const Markup = () => {
   const { menuToggle } = useContext(ThemeContext);
   const routes = [
+    // Sales
+    { url: "all-sales", component: AllSales },
     /// Dashboard
     { url: "", component: Home },
     { url: "dashboard", component: Home },
