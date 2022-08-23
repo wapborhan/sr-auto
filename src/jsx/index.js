@@ -23,6 +23,7 @@ import Task from "./components/Dashboard/Task";
 
 // Sales Pages
 import AllSales from "./components/sales/all-sales/AllSales";
+import AddSales from "./components/sales/AddSales";
 
 /////Demo pages
 import Demo1 from "./components/Dashboard/Demo/Demo1";
@@ -123,6 +124,7 @@ const Markup = () => {
   const routes = [
     // Sales
     { url: "all-sales", component: AllSales },
+    { url: "add-sale", component: AddSales },
     /// Dashboard
     { url: "", component: Home },
     { url: "dashboard", component: Home },

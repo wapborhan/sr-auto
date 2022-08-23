@@ -54,7 +54,7 @@ const SideBar = () => {
   path = path[path.length - 1];
   /// Active menu
   let dashboard = [""],
-    sales = ["all-sales"],
+    sales = ["all-sales", "add-sale"],
     menu = [
       "dashboard-dark",
       "guest-list",
@@ -188,6 +188,14 @@ const SideBar = () => {
                   to="/all-sales"
                 >
                   All Sales
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`${path === "add-sale" ? "mm-active" : ""}`}
+                  to="/add-sale"
+                >
+                  Add Sales
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,6 @@
 import React, { useMemo } from "react";
+/// React router dom
+import { Link } from "react-router-dom";
 import PageTitle from "../../../layouts/PageTitle";
 import {
   useTable,
@@ -50,7 +52,16 @@ export const AllSales = () => {
       <PageTitle activeMenu="All Sales" motherMenu="Sales" />
       <div className="card">
         <div className="card-header">
-          <h4 className="card-title">All Sales</h4>
+          <h4 className="card-title w-100">
+            <div className="d-flex justify-content-between">
+              <div>All Sales</div>{" "}
+              <div>
+                <Link to="add-sale" className="btn btn-primary">
+                  Add Sales
+                </Link>
+              </div>
+            </div>
+          </h4>
         </div>
         <div className="card-body">
           <div className="table-responsive">

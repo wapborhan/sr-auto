@@ -9,36 +9,30 @@ export const COLUMNS = [
     //disableFilters: true,
   },
   {
-    Header: "Card NO",
-    Footer: "Card NO",
-    accessor: "Card NO",
-    Filter: ColumnFilter,
-  },
-  {
-    Header: "Last Name",
-    Footer: "Last Name",
-    accessor: "last_name",
-    Filter: ColumnFilter,
-  },
-  {
-    Header: "Email Id",
-    Footer: "Email Id",
-    accessor: "email",
-    Filter: ColumnFilter,
-  },
-  {
-    Header: "Date of  Birth",
-    Footer: "Date of  Birth",
-    accessor: "date_of_birth",
+    Header: "Sale Date",
+    Footer: "Sale Date",
+    accessor: "sale_date",
     Cell: ({ value }) => {
       return format(new Date(value), "dd/mm/yyyy");
     },
     Filter: ColumnFilter,
   },
   {
-    Header: "Country",
-    Footer: "Country",
-    accessor: "country",
+    Header: "Showroom",
+    Footer: "Showroom",
+    accessor: "showroom",
+    Filter: ColumnFilter,
+  },
+  {
+    Header: "Card No",
+    Footer: "Card NO",
+    accessor: "card_no",
+    Filter: ColumnFilter,
+  },
+  {
+    Header: "Cust Name",
+    Footer: "Cust Name",
+    accessor: "cust_name",
     Filter: ColumnFilter,
   },
   {
@@ -48,21 +42,9 @@ export const COLUMNS = [
     Filter: ColumnFilter,
   },
   {
-    Header: "Sex",
-    Footer: "Sex",
-    accessor: "Sex",
-    Filter: ColumnFilter,
-  },
-  {
-    Header: "Price",
-    Footer: "Price",
-    accessor: "Price",
-    Filter: ColumnFilter,
-  },
-  {
-    Header: "Hire Price",
-    Footer: "Hire Price",
-    accessor: "Hire Price",
+    Header: "Product",
+    Footer: "Product",
+    accessor: "product",
     Filter: ColumnFilter,
   },
 ];
@@ -78,14 +60,14 @@ export const GROUPED_COLUMNS = [
     Footer: "Name",
     columns: [
       {
-        Header: "First Name",
-        Footer: "First Name",
-        accessor: "first_name",
+        Header: "Showroom",
+        Footer: "Showroom",
+        accessor: "showroom",
       },
       {
-        Header: "Last Name",
-        Footer: "Last Name",
-        accessor: "last_name",
+        Header: "Cust Name",
+        Footer: "Cust Name",
+        accessor: "cust_name",
       },
     ],
   },
@@ -94,9 +76,9 @@ export const GROUPED_COLUMNS = [
     Footer: "Info",
     columns: [
       {
-        Header: "Date of  Birth",
-        Footer: "Date of  Birth",
-        accessor: "date_of_birth",
+        Header: "Sale Date",
+        Footer: "Sale Date",
+        accessor: "sale_date",
       },
       {
         Header: "Country",
