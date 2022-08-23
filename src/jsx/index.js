@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 /// React router dom
-import {  Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 /// Css
 import "./index.css";
@@ -22,13 +22,12 @@ import Reviews from "./components/Dashboard/Reviews";
 import Task from "./components/Dashboard/Task";
 
 /////Demo pages
-import Demo1 from './components/Dashboard/Demo/Demo1';
-import Demo2 from './components/Dashboard/Demo/Demo2';
-import Demo3 from './components/Dashboard/Demo/Demo3';
-import Demo4 from './components/Dashboard/Demo/Demo4';
-import Demo5 from './components/Dashboard/Demo/Demo5';
+import Demo1 from "./components/Dashboard/Demo/Demo1";
+import Demo2 from "./components/Dashboard/Demo/Demo2";
+import Demo3 from "./components/Dashboard/Demo/Demo3";
+import Demo4 from "./components/Dashboard/Demo/Demo4";
+import Demo5 from "./components/Dashboard/Demo/Demo5";
 //import Demo6 from './components/Dashboard/Demo/Demo6';
-
 
 /// App
 import AppProfile from "./components/AppsMenu/AppProfile/AppProfile";
@@ -122,22 +121,21 @@ const Markup = () => {
     /// Dashboard
     { url: "", component: Home },
     { url: "dashboard", component: Home },
-	{ url: "dashboard-dark", component: DashboardDark },
+    { url: "dashboard-dark", component: DashboardDark },
     { url: "guest-list", component: GuestList },
     { url: "guest-detail", component: GuestDetail },
     { url: "concierge", component: Concierge },
     { url: "room-list", component: Room },
     { url: "reviews", component: Reviews },
     { url: "task", component: Task },
-	
-	///themes 
+
+    ///themes
     { url: "theme1", component: Demo1 },
-	{ url: "theme2", component: Demo2 },
+    { url: "theme2", component: Demo2 },
     { url: "theme3", component: Demo3 },
     { url: "theme4", component: Demo4 },
     { url: "theme5", component: Demo5 },
-   // { url: "theme6", component: Demo6 },
-	
+    // { url: "theme6", component: Demo6 },
 
     /// Apps
     { url: "app-profile", component: AppProfile },
@@ -182,11 +180,11 @@ const Markup = () => {
     { url: "map-jqvmap", component: JqvMap },
     { url: "uc-lightgallery", component: Lightgallery },
 
-	///Redux
-	{ url: "todo", component: Todo },
-	{ url: "redux-form", component: ReduxForm },
+    ///Redux
+    { url: "todo", component: Todo },
+    { url: "redux-form", component: ReduxForm },
     { url: "redux-wizard", component: WizardForm },
-	
+
     /// Widget
     { url: "widget-basic", component: Widget },
 
@@ -208,8 +206,8 @@ const Markup = () => {
     { url: "form-validation-jquery", component: jQueryValidation },
 
     /// table
-	{ url: 'table-filtering', component: FilteringTable },
-    { url: 'table-sorting', component: SortingTable },
+    { url: "table-filtering", component: FilteringTable },
+    { url: "table-sorting", component: SortingTable },
     { url: "table-datatable-basic", component: DataTable },
     { url: "table-bootstrap-basic", component: BootstrapTable },
 
