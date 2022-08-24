@@ -169,7 +169,7 @@ const SideBar = () => {
       <PerfectScrollbar className="deznav-scroll">
         <MM className="metismenu" id="menu">
           <li className={`${dashboard.includes(path) ? "mm-active" : ""}`}>
-            <Link className="has-arrow ai-icon" to="/">
+            <Link to="/" className="ai-icon">
               <i className="flaticon-025-dashboard"></i>
               <span className="nav-text">Dashboard</span>
             </Link>
