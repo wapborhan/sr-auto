@@ -123,7 +123,7 @@ const Markup = () => {
   const { menuToggle } = useContext(ThemeContext);
   const routes = [
     // Sales
-    { url: "all-sales", component: AllSales },
+    { url: "all-sale", component: AllSales },
     { url: "add-sale", component: AddSales },
     /// Dashboard
     { url: "", component: Home },

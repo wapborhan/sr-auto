@@ -41,11 +41,11 @@ const SideBar = () => {
     btn.addEventListener("click", toggleFunc);
 
     //sidebar icon Heart blast
-    var handleheartBlast = document.querySelector(".heart");
-    function heartBlast() {
-      return handleheartBlast.classList.toggle("heart-blast");
-    }
-    handleheartBlast.addEventListener("click", heartBlast);
+    // var handleheartBlast = document.querySelector(".heart");
+    // function heartBlast() {
+    //   return handleheartBlast.classList.toggle("heart-blast");
+    // }
+    // handleheartBlast.addEventListener("click", heartBlast);
   }, []);
   let scrollPosition = useScrollPosition();
   /// Path
@@ -54,7 +54,15 @@ const SideBar = () => {
   path = path[path.length - 1];
   /// Active menu
   let dashboard = [""],
-    sales = ["all-sales", "add-sale"],
+    customer = ["customer-list", "add-customer"],
+    sales = ["all-sale", "add-sale"],
+    installment = ["installment-list", "payment-installment"],
+    product = [
+      "product-list",
+      "add-product",
+      "transfer-product",
+      "received-product",
+    ],
     menu = [
       "dashboard-dark",
       "guest-list",
@@ -154,6 +162,7 @@ const SideBar = () => {
       "page-error-500",
       "page-error-503",
     ];
+  const d = new Date();
   return (
     <div
       className={`deznav ${iconHover} ${
@@ -175,7 +184,35 @@ const SideBar = () => {
             </Link>
           </li>
 
-          {/*  */}
+          {/* Customer */}
+          <li className={`${customer.includes(path) ? "mm-active" : ""}`}>
+            <Link className="has-arrow ai-icon" to="#">
+              <i className="flaticon-050-info"></i>
+              <span className="nav-text">Customer</span>
+            </Link>
+            <ul>
+              <li>
+                <Link
+                  className={`${path === "customer-list" ? "mm-active" : ""}`}
+                  to="/customer-list"
+                >
+                  Customer List
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`${path === "add-customer" ? "mm-active" : ""}`}
+                  to="/add-customer"
+                >
+                  Add Customer
+                </Link>
+              </li>
+            </ul>
+          </li>
+          {/* Customer */}
+
+          {/* Sale */}
+
           <li className={`${sales.includes(path) ? "mm-active" : ""}`}>
             <Link className="has-arrow ai-icon" to="#">
               <i className="flaticon-050-info"></i>
@@ -185,9 +222,9 @@ const SideBar = () => {
               <li>
                 <Link
                   className={`${path === "all-sales" ? "mm-active" : ""}`}
-                  to="/all-sales"
+                  to="/all-sale"
                 >
-                  All Sales
+                  All Sale
                 </Link>
               </li>
               <li>
@@ -195,12 +232,51 @@ const SideBar = () => {
                   className={`${path === "add-sale" ? "mm-active" : ""}`}
                   to="/add-sale"
                 >
-                  Add Sales
+                  Add Sale
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`${path === "add-sale" ? "mm-active" : ""}`}
+                  to="/sale-return"
+                >
+                  Sales Return
                 </Link>
               </li>
             </ul>
           </li>
-          {/*  */}
+
+          {/* Sale */}
+
+          {/* Installment */}
+          <li className={`${installment.includes(path) ? "mm-active" : ""}`}>
+            <Link className="has-arrow ai-icon" to="#">
+              <i className="flaticon-050-info"></i>
+              <span className="nav-text">Installment</span>
+            </Link>
+            <ul>
+              <li>
+                <Link
+                  className={`${
+                    path === "installment-list" ? "mm-active" : ""
+                  }`}
+                  to="/installment-list"
+                >
+                  Installment List
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`${path === "payment-list" ? "mm-active" : ""}`}
+                  to="/payment-list"
+                >
+                  Payment List
+                </Link>
+              </li>
+            </ul>
+          </li>
+          {/* Installment */}
+
           <li className={`${menu.includes(path) ? "mm-active" : ""}`}>
             <Link className="has-arrow ai-icon" to="#">
               <i className="flaticon-050-info"></i>
@@ -878,10 +954,7 @@ const SideBar = () => {
         </MM>
         <div className="copyright">
           <p>
-            <strong>Innap Hotel Admin</strong> © 2021 All Rights Reserved
-          </p>
-          <p className="fs-12">
-            Made with <span className="heart"></span> by DexignZone
+            <strong>SR Auto</strong> © {d.getFullYear()} All Rights Reserved
           </p>
         </div>
       </PerfectScrollbar>
